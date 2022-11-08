@@ -21,6 +21,7 @@ header{
     background-image: url(
         ./img/banner.jpg
     );
+    /* background-size:100%; */
     flex-wrap:wrap;
 }
 .flex{
@@ -512,4 +513,138 @@ footer .foot .mot span{
 .empty{
    
     height: 200px;
+}
+
+
+.toggle-btn{
+    display: none;
+}
+@media screen and (min-width:460px) and (max-width:767px) {
+    header, main, footer{
+        width: 100%;
+        /* float:none; */
+        
+    }
+    header{
+        height: 550px;
+        
+    }
+    body{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    header .logo{
+        margin-top: -40px;
+        margin-left:-20px;
+    }
+    header .icon{
+        margin-top: 40px;
+        margin-left: 150px;
+    }
+    .toggle-btn{
+        display: inline-block;
+        font-size: 30px;
+        text-decoration: none;
+        
+        color: #345e2bde;
+        padding:7px 10px;
+        position: absolute;
+        right: 10px;
+        top:20px;
+    }
+    header .open{
+        text-align: center;
+    }
+  
+    /* hidden close */
+    #nav .close{
+        margin-right:6px;
+        display: none;
+    
+    }
+  
+    /* 导航为目标状态时显示关闭按钮 */
+    #nav:target .close{
+        display: inline-block;
+    }
+    /* 初始隐藏导航 */
+    #nav{
+        display: none;
+    
+
+    }
+    #nav ul{ 
+        justify-content: space-around;
+        border-radius: 40px;
+       
+        
+    }
+    /* #nav ul li{ */
+        /* color:white; */
+    /* } */
+    /* #nav ul{
+        flex-direction: column;
+      
+    } */
+    #nav:target{
+        display: block;
+        
+        position: absolute;
+        top: 0;
+        padding-top:0;
+        width:10%;
+    }
+    /*  */
+    #nav:target ul {
+        background-color: rgb(200, 225, 186);
+    }
+    #nav:target li, #nav:target li a{
+        display: block;
+        color: #14462d;
+        text-align: right;
+    }
+    #nav:target li a:hover{
+        background-color: #e9efdf;
+    }
+    header .text {
+        position:absolute;
+        left:-280px;
+        top:300px;
+    }
+    header .click{
+        margin-top:450px;
+        justify-content: space-around;
+    }
+    header h1{
+        line-height: 1.2em;
+    }
+    main .wrapper{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 300px;
+        margin-bottom: 10px;
+        
+    }
+  
+  
+    main .description{
+        margin-top:280px;
+    }
+    
+    main .produit{
+        flex-wrap: row wrap;
+        width: 100%;
+
+    }
+    footer .foot{
+        margin-top:350px;
+        width: 100%;
+    }
+    footer .pannier{
+        display: none;
+    }
+        
+    .empty{
+        display: none;
+    }
 }
